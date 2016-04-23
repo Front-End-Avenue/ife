@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 15</title>
+  </head>
+<body>
+
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+
+  <ul id="resort">
+  </ul>
+
+  <button id="sort-btn">排序</button>
+
+<script type="text/javascript">
+var source   = document.getElementById("source");
+var cityInfo = document.getElementsByTagName("li");
+
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+  /*
+  coding here
+  */
+  var polluCity = [];
+
+  // 遍历获取城市污染信息
+  for (i=0; i<cityInfo.length; i++) {
+	var cityName   = cityInfo[i].innerHTML.substr(0,2);
+	var airQuality = cityInfo[i].innerHTML.substr(10,2);
+	var city = [cityName, airQuality];
+	polluCity.push(city);
+  }
+
+  // console.log(data);
+  return polluCity;
+}
+
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+
+  // 对污染指数进行排序 (大-->小)
+  function sortNumber (a,b) {
+    return b-a;
+  }
+  var polluNum = [];
+
+  for (i=0; i<data.length; i++) {
+	var airQuality = data[i][1];
+  	polluNum.push(airQuality);
+  }
+  var polluSort = polluNum.sort(sortNumber);
+
+  var polluList = [];
+  // 先遍历排序的污染指数
+  for (j=0; j<polluSort.length; j++) {
+
+    // 遍历污染城市进行匹配
+    for (i=0; i<data.length; i++) {
+      var city = data[i];
+      var cityName = city[0];
+      var airQuality = city[1];
+
+      // 添加污染项
+      if ( airQuality == polluSort[j] ) {
+        if ( j > 0 && polluSort[j] == polluSort[j-1] ) {
+          // 不执行任何内容
+        } else {
+          // 按顺序添加城市
+          polluList.push(city);
+        }
+      }
+    }
+  }
+  return polluList;
+}
+
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+function render(data) {
+	var list = document.getElementById("resort");
+	for (i=0; i<data.length; i++) {
+		// 获取旧的污染列表
+	  var oldList = list.innerHTML;
+    list.innerHTML = oldList+"<li>"+"第"+(i+1)+"名:&nbsp;"+data[i][0]+"空气质量: <b>"+data[i][1]+"</b></li>";
+	}
+}
+
+function btnHandle() {
+  var aqiData = getData();
+  aqiData = sortAqiData(aqiData);
+  render(aqiData);
+}
+
+function init() {
+
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  var btn = document.getElementById("sort-btn");
+  btn.onclick=function() {
+  	btnHandle();
+  }
+}
+
+init();
+
+</script>
+</body>
+</html>

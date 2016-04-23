@@ -1,0 +1,33 @@
+html, body, ul, h3 {
+  margin: 0;
+  padding: 0;
+}
+html, body, .container {
+  width: 100%;
+  height: 100%;
+  font-size: xx-large;
+}
+.container {
+  text-align: center;
+  color: rgba(200,200,200,.6);
+  background-color: rgba(0,0,0,.72);
+}
+h3 {
+  padding: 1rem 0;
+  font-size: .9rem;
+}
+#aqi-list {
+  list-style-type: none;
+  font-size: .8rem;
+}
+#aqi-list li div {
+  display: inline-block;
+}
+#aqi-list li div:first-child {
+  width: 45%;
+  text-align: right;
+}
+#aqi-list li div:last-child {
+  width: 55%;
+  text-align: left;
+}

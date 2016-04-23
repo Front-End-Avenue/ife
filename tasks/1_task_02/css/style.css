@@ -1,0 +1,226 @@
+/* ===============================================================
+	global style
+   =============================================================== */
+html, body, ul, ol, li, p, h1, h2, h3, h4{
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, li {
+	list-style-type: none;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+.container {
+	padding-top: 2%;
+	position: relative;
+	font-size: medium;
+	background-color: #b9e88b;
+	font-family: "Microsoft YaHei",
+				 "微软雅黑",
+				 sans-serif;
+}
+
+
+/* ===============================================================
+	nav-bar
+   =============================================================== */
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #66a121;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.25), 0px 1px 0px rgba(255,255,255,0.15) inset;
+}
+
+.nav-content {
+	position: relative;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.nav-content h1 {
+	padding-left: 1%;
+	color: #bae98b;
+}
+
+.tags {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 1%;
+	width: 35%;
+	text-align: right;
+}
+
+.tags li {
+	display: inline;
+	padding-left: 3%;
+}
+
+.tags li a {
+	text-decoration: none;
+	color: #b9e88b;
+}
+
+/* ===============================================================
+	main-content
+   =============================================================== */
+.main {
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 1024px;
+}
+
+.section {
+	margin-top: 3%;
+	padding: 3%;
+	background-color: #77b242;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.35);
+}
+
+.section h2 {
+	margin-top: 1%;
+	font-size: 1.5em;
+}
+
+.section h3 {
+	margin-top: 1%;
+	font-size: 1.3em;
+}
+
+.section h4 {
+	margin-top: 1%;
+	font-size: 1.05em;
+}
+
+.section p {
+	margin-top: 3%;
+	text-indent: 2em;
+	line-height: 1.6em;
+	color: #111;
+}
+
+.team {
+	padding: 3% 0;
+	padding-left: 4%;
+}
+
+.members li {
+	margin-top: 1%;
+	display: inline-block;
+}
+
+
+/*  section-0
+   =============================================================== */
+
+/*  section-1
+   =============================================================== */
+
+/*  section-2
+   =============================================================== */
+
+.imgBox {
+	margin-top: 2%;
+	width: 45%;
+	text-align: center;
+	border: 3px dotted rgba(255, 255, 255, 0.25);
+}
+
+/* 此时用 first-child 伪类无效，必须使用 id 增加权重*/
+#imgBox-fir {
+	border-style: double;
+}
+
+.imgBox .img-title {
+	display: block;
+	margin-top: 5%;
+}
+.imgBox img {
+	margin: 2%;
+	width: 94%;
+}
+
+/*  section-3
+   =============================================================== */
+table {
+	margin-top: 2%;
+	margin-left: 4%;
+}
+
+/*  section-4
+   =============================================================== */
+
+.item {
+	margin: 2%;
+	width: 100%;
+}
+.item div {
+	display: inline-block;
+	margin: 1%;
+}
+fieldset {
+	margin-top: 3%;
+}
+.item-title {
+	left: 0;
+	margin-right: 0;
+	width: 40%;
+	text-align: right;
+}
+.item-content {
+	right: 0;
+	width: 40%;
+}
+#item-content-last {
+	position: relative;
+	top: 5px;
+}
+
+button {
+	position: relative;
+	right: 0;
+	width: 30%;
+	margin: 1% 1.4%;
+	padding: 0.8%;
+	font-size: 0.9em;
+	color: #fff;
+	background-color: #66a121;
+	border: 1px solid rgba(200, 200, 200, 0.15);
+	box-sizing: border-box;
+	box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.25);
+}
+
+/* ===============================================================
+    footer
+   =============================================================== */
+footer {
+	margin: 0 auto;
+	margin-top: 5%;
+	padding: 6%;
+	background-color: #66a131;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.35);
+}
+
+footer p {
+	margin: 0 auto;
+	padding: 1%;
+	width: 100%;
+	color: #b9e88b;
+	text-align: center;
+}
+
+
+
+
+
+
