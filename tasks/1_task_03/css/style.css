@@ -1,0 +1,124 @@
+/* ===============================================================
+	global style
+   =============================================================== */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+}
+p {
+	margin: 3% 0;
+	padding: 0;
+}
+
+.container {
+	position: absolute;
+	margin: 20px;
+	width: auto;
+	height: auto;
+	font-size: medium;
+	background-color: #eee;
+}
+
+.team,
+.about,
+.members {
+	background-color: #fff;
+}
+
+.container,
+.team,
+.logo,
+.about,
+.members,
+.personal-logo {
+	border: 1px solid #999;
+	box-sizing: border-box;
+}
+
+.logo,
+.personal-logo{
+	width: 80px;
+	height: 80px;
+}
+
+/*  team
+   =============================================================== */
+.team {
+	float: left;
+	margin: 20px;
+	width: 200px;
+	height: 110px;
+	background-color: #fff;
+}
+
+.team div {
+	margin: 5%;
+}
+
+.logo {
+	float: left;
+	background: url(../images/frontEndLogo.png) no-repeat;
+	background-size: cover;
+}
+.team-name {
+	float: right;
+	width: 76px;
+	line-height: 1.6em;
+}
+
+/*  about
+   =============================================================== */
+.about {
+	position: relative;
+	margin: 20px 0;
+	margin-left: 240px;
+	margin-right: 160px;
+	padding: 0 20px;
+	width: auto;
+	height: auto;
+	background-color: #fff;
+}
+
+/*  members
+   =============================================================== */
+.members {
+	float: right;
+	margin: 20px;
+	width: 120px;
+	height: 520px;
+	background-color: #fff;
+}
+
+.personal-logo {
+	margin: 20px auto;
+}
+
+.pLogo_0 { background: url(../images/xiaoQian.png) no-repeat; }
+.pLogo_1 { background: url(../images/xiaoBo.png) no-repeat; }
+.pLogo_2 { background: url(../images/aJi.png) no-repeat; }
+.pLogo_3 { background: url(../images/xiaoLuo.png) no-repeat; }
+.pLogo_4 { background: url(../images/xiaoYu.png) no-repeat; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

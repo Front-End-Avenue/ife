@@ -1,0 +1,216 @@
+/* ===============================================================
+	global style
+   =============================================================== */
+html, body, ul, ol, li, p, h1, h2, h3, h4{
+	margin: 0;
+	padding: 0;
+}
+html { font-size: 62.5%; }
+
+ul, ol, li { list-style-type: none; }
+a {
+	color: rgba(0,0,0,.8);
+	text-decoration: none;
+}
+.container {
+	padding-top: 6rem;
+	position: relative;
+	background-color: rgba(200,200,200,.8);
+	font-family: "黑体",
+				 sans-serif;
+}
+hr { margin: 3rem 0; }
+
+/* ===============================================================
+	nav-bar
+   =============================================================== */
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 4.4rem;
+	line-height: 4.4rem;
+	background-color: rgba(0,0,0,.7);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.25), 0px 1px 0px rgba(255,255,255,0.15) inset;
+}
+
+.nav-content {
+	position: relative;
+	max-width: 1024px;
+	margin: 0 auto;
+	font-size: 1.6rem;
+}
+.nav-content h1 {
+	color: rgba(255,255,255,.8);
+}
+
+.tags {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-right: 2%;
+	width: 45%;
+	text-align: right;
+}
+
+.tags li {
+	display: inline-block;
+	padding-left: 4%;
+}
+
+.tags li a {
+	text-decoration: none;
+	color: rgba(255,255,255,.8);
+}
+
+/* ===============================================================
+	main
+   =============================================================== */
+.main {
+	margin: 0 auto;
+	padding: 0 3.5%;
+	max-width: 1024px;
+}
+.title {
+	padding: 1rem 0;
+	font-size: 2rem;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+.subtitle {
+	display: block;
+	padding: 1rem 0;
+	padding-left: 1rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+
+.task {
+	display: inline-block;
+	margin: 1rem 0;
+	padding-left: 2%;
+	width: 82%;
+	height: 3rem;
+	line-height: 3rem;
+	color: rgba(0,0,0,.8);
+	font-size: 1.3rem;
+	font-weight: bold;
+	border: 1px solid rgba(0,0,0,.8);
+	border-radius: .6rem;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.summary { width: 100%; }
+
+.task:hover {
+	background-color: rgba(0,0,0,.3);
+	text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+.task:active { background-color: rgba(0,0,0,.3); }
+.task:visited { background-color: none; }
+
+.src {
+	display: inline-block;
+	padding: 0 1%;
+	width: 14%;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: bold;
+	border: 1px solid rgba(0,0,0,.8);
+	border-radius: .6rem;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.src:hover {
+	background-color: rgba(0,0,0,.3);
+	text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+.src:active { background-color: rgba(0,0,0,.3); }
+.src:visited { background-color: none; }
+
+.content {
+	display: block;
+	margin: 1rem 0;
+	width: 96%;
+}
+.detail {
+	line-height: 2rem;
+	color: rgba(0,0,0,.8);
+	font-size: 1.45rem;
+	font-weight: 600;
+}
+
+/*  columns
+   =============================================================== */
+.box {
+	width: 100%;
+}
+.box:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-1 {
+	float: left;
+	padding: 0 .5%;
+	width: 32.33%;
+}
+.col-2 {
+	float: left;
+	padding: 0 1%;
+	width: 31.33%;
+}
+@media all and (max-width:1024px) {
+	.nav-content h1 { padding-left: 2%; }
+}
+@media all and (max-width:768px) {
+	.main { padding: 0 5%; }
+	.col-1 { width: 49%; }
+	.col-2 { width: 48%; }
+}
+@media all and (max-width:560px) {
+	.main { padding: 0 8%; }
+	.col-1 { width: 100%; }
+	.col-2 { width: 100%; }
+}
+
+/* ===============================================================
+    footer
+   =============================================================== */
+footer {
+	margin: 0 auto;
+	margin-top: 6%;
+	padding: 7%;
+	font-size: 1.6rem;
+	background-color: rgba(0,0,0,.7);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.35);
+}
+
+footer p {
+	margin: 0 auto;
+	padding: 1%;
+	width: 100%;
+	color: rgba(255,255,255,.8);
+	text-align: center;
+}
+
+
+
+
+

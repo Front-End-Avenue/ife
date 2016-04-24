@@ -1,0 +1,53 @@
+.grid-container {
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	max-width: 1200px;
+	height: 100%;
+	outline: 1px solid #999;
+}
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='col-'] div {
+	margin-left: 20px;
+	height: 50px;
+	background-color: #eee;
+	box-sizing: border-box;
+	outline: 1px solid #999;
+}
+[class*='col-'] {
+	float: left;
+	padding: 20px 0 0;
+	min-height: 1px;
+	width: 16.66%;
+}
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+
+@media all and (max-width:768px) {
+	.col-1 { width: 16.66%; }
+	.col-2 { width: 33.33%; }
+	.col-4 { width: 50%; }
+
+	.col-4:last-of-type {
+		width: 100%;
+	}
+	.row .col-2 + .col-6 {
+		width: 33.33%;
+	}
+	.row .col-1 + .col-2 {
+		width: 66.66%;
+	}
+}
+
+
+
+
+
