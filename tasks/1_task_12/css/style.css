@@ -1,0 +1,189 @@
+.container {
+	width: 220px;
+	text-align: center;
+}
+
+/*
+ * 表格
+ */
+.rank {
+	text-align: left;
+}
+
+.rank tr:nth-child(odd) {
+	background-color: #ccc;
+}
+
+.rank tr:first-child {
+	color: #fff;
+	background-color: #000;
+}
+
+.rank tr:nth-child(2),
+.rank tr:nth-child(3),
+.rank tr:nth-child(4) {
+}
+
+.rank tr:nth-of-type(2),
+.rank tr:nth-of-type(3),
+.rank tr:nth-of-type(4) {
+	color: red;
+}
+
+/*
+ * 输入框处于焦点时宽度动态变化
+ */
+.input {
+	margin: 40px auto;
+	width: 100px;
+	-webkit-transition: width .2s linear;
+	-o-transition: width .2s linear;
+	transition: width .2s linear;
+}
+.input:focus {
+	width: 160px;
+}
+
+/*
+ * CSS3 轮播图
+ */
+#wraps-container {
+	position: relative;
+	width: 220px;
+	height: 100px;
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+#wraps{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	margin-left: 0;
+	width: 660px;
+	height: 100px;
+	-webkit-animation: slide-init 6s ease-in-out infinite;
+			animation: slide-init 6s ease-in-out infinite;
+}
+
+.wrap {
+	float: left;
+	width: 220px;
+	height: 100px;
+	line-height: 100px;
+	color: #fff;
+}
+
+.wrap:first-child { background-color: #66d9ef; }
+.wrap:nth-child(2) { background-color: #44b7cd; }
+.wrap:last-child { background-color: #22a6ab; }
+
+@keyframes slide-init {
+	0%   { margin-left: 0px; }
+	23%  { margin-left: 0px; }
+	33%  { margin-left: -220px; }
+	56%  { margin-left: -220px; }
+	66%  { margin-left: -440px; }
+	86%  { margin-left: -440px; }
+	100% { margin-left: 0px; }
+}
+
+@-webkit-keyframes slide-init {
+	0%   { margin-left: 0px; }
+	23%  { margin-left: 0px; }
+	33%  { margin-left: -220px; }
+	56%  { margin-left: -220px; }
+	66%  { margin-left: -440px; }
+	86%  { margin-left: -440px; }
+	100% { margin-left: 0px; }
+}
+
+@keyframes slide-2nd {
+	0%   { margin-left: -220px; }
+	23%  { margin-left: -220px; }
+	33%  { margin-left: -440px; }
+	56%  { margin-left: -440px; }
+	66%  { margin-left: 0px; }
+	86%  { margin-left: 0px; }
+	100% { margin-left: -220px; }
+}
+
+@-webkit-keyframes slide-2nd {
+	0%   { margin-left: -220px; }
+	23%  { margin-left: -220px; }
+	33%  { margin-left: -440px; }
+	56%  { margin-left: -440px; }
+	66%  { margin-left: 0px; }
+	86%  { margin-left: 0px; }
+	100% { margin-left: -220px; }
+}
+@keyframes slide-3rd {
+	0%   { margin-left: -440px; }
+	23%  { margin-left: -440px; }
+	33%  { margin-left: 0px; }
+	56%  { margin-left: 0px; }
+	66%  { margin-left: -220px; }
+	86%  { margin-left: -220px; }
+	100% { margin-left: -440px; }
+}
+
+@-webkit-keyframes slide-3rd {
+	0%   { margin-left: -440px; }
+	23%  { margin-left: -440px; }
+	33%  { margin-left: 0px; }
+	56%  { margin-left: 0px; }
+	66%  { margin-left: -220px; }
+	86%  { margin-left: -220px; }
+	100% { margin-left: -440px; }
+}
+
+#l01:checked~#wraps-container #wraps {
+	-webkit-animation-name: slide-init;
+}
+#l02:checked~#wraps-container #wraps {
+	-webkit-animation-name: slide-2nd;
+}
+#l03:checked~#wraps-container #wraps {
+	-webkit-animation-name: slide-3rd;
+}
+
+#l01:active~#wraps-container #wraps {
+	-webkit-animation-name: none;
+	margin-left: 0;
+}
+#l02:active~#wraps-container #wraps {
+	-webkit-animation-name: none;
+	margin-left: -220px;
+}
+#l03:active~#wraps-container #wraps {
+	-webkit-animation-name: none;
+	margin-left: -440px;
+}
+
+/* 轮播图切换按钮 */
+.tags {
+	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	right: 0;
+	cursor: default;
+}
+.tag {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	color: #fff;
+	background-color: rgba(255,255,255,.6);
+	cursor: pointer;
+	text-decoration: none;
+}
+.tag:hover {
+	background-color: rgba(255,255,255,.4);
+}
+
+/* 隐藏 Input 按钮*/
+#l01, #l02, #l03 {
+	display: none;
+}
