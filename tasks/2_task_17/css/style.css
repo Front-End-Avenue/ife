@@ -1,0 +1,45 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "SmiHei",
+				 sans-serif;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	margin: 0 auto;
+	padding-top: 26px;
+	width: 1024px;
+	height: 700px;
+}
+
+#form-gra-time,
+#cities {
+	float: left;
+	margin: 0 2%;
+	width: 200px;
+	padding: 14px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 18px;
+	color: #666;
+}
+
+legend {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#aqi-chart-wrap {
+	margin: 18px 20px 0;
+	padding: 0 15px;
+	height: 600px;
+	border: 1px solid #aaa;
+	border-radius: 16px;
+}
